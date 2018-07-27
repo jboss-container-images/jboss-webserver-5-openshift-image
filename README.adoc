@@ -1,0 +1,7 @@
+# Red Hat JBoss Web Server 5.0 OpenShift container image
+
+Components are available in the tomcat9 directory.
+
+# License
+
+See link:LICENSE[LICENSE] file.
