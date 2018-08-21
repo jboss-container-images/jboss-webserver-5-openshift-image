@@ -50,7 +50,7 @@
             "displayName": "Git Reference",
             "description": "Git branch/tag reference",
             "name": "SOURCE_REPOSITORY_REF",
-            "value": "1.0",
+            "value": "1.2",
             "required": false
         },
         {
