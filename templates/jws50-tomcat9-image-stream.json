@@ -17,11 +17,11 @@
                 "annotations": {
                     "openshift.io/display-name": "JBoss Web Server 5.0 Apache Tomcat 9",
                     "openshift.io/provider-display-name": "Red Hat, Inc.",
-                    "version": "1.0"
+                    "version": "1.1"
                 }
             },
             "labels": {
-                "jws50": "1.0"
+                "jws50": "1.1"
             },
             "spec": {
                 "tags": [
