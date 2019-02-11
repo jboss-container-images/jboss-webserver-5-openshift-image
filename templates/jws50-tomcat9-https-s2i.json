@@ -6,7 +6,7 @@
             "iconClass": "icon-rh-tomcat",
             "openshift.io/provider-display-name": "Red Hat, Inc.",
             "tags": "tomcat,tomcat8,java,jboss,hidden",
-            "version": "1.1",
+            "version": "1.2",
             "openshift.io/display-name": "JBoss Web Server 5.0 Apache Tomcat 9 (with https)",
             "description": "An example JBoss Web Server application. For more information about using this template, see https://github.com/jboss-openshift/application-templates.",
             "template.openshift.io/long-description": "This template defines resources needed to develop Red Hat JBoss Web Server 5.0 Apache Tomcat 9 based application, including a build configuration, application deployment configuration, and secure communication using https.",
@@ -18,7 +18,7 @@
     },
     "labels": {
         "template": "jws50-tomcat9-https-s2i",
-        "jws50": "1.1"
+        "jws50": "1.2"
     },
     "message": "A new JWS application for Apache Tomcat 9 has been created in your project. The username/password for administering your JWS is ${JWS_ADMIN_USERNAME}/${JWS_ADMIN_PASSWORD}. Please be sure to create the secret named \"${JWS_HTTPS_SECRET}\" containing the ${JWS_HTTPS_CERTIFICATE} file used for serving secure content.",
     "parameters": [
@@ -282,7 +282,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "jboss-webserver50-tomcat9-openshift:1.1"
+                            "name": "jboss-webserver50-tomcat9-openshift:1.2"
                         }
                     }
                 },
