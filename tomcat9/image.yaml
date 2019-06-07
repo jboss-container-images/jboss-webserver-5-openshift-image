@@ -95,11 +95,12 @@ modules:
                   ref: master
       install:
           - name: dynamic-resources
+          - name: jboss.container.maven.35.bash
+            version: "3.5scl"
           - name: s2i-common
           - name: java-alternatives
           - name: os-jws-s2i
           - name: os-jws8-conffiles
-          - name: os-jws-deployments
           - name: os-jws-deployments
           - name: os-java-jolokia
           - name: os-jws-jolokia
@@ -110,16 +111,12 @@ modules:
           - name: os-jws-secure-mgmt-console
           - name: os-jws-rm-root
           - name: os-jws-rm-defaults
-          - name: jboss-maven
           - name: os-jws-chmod
           - name: openshift-passwd
           - name: os-logging
 packages:
-      repositories:
-          - jboss-os
-          - jboss-rhscl
       install:
-          - rh-mongodb32-mongo-java-driver
+          - rh-mongodb36-mongo-java-driver
           - postgresql-jdbc
           - mysql-connector-java
           - PyYAML
