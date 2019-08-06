@@ -3,7 +3,7 @@ schema_version: 1
 name: "jboss-webserver-5/webserver52-openjdk8-tomcat9-openshift"
 description: "Red Hat JBoss Web Server 5.2 - Tomcat 9 OpenShift container image"
 version: "1.0"
-from: "jboss-webserver-5/webserver52-openjdk8-tomcat9:jb-webserver-5.0-tomcat-9-dev-rhel-7-containers-candidate-99013-20190806125956"
+from: "jboss-webserver-5/webserver52-openjdk8-tomcat9:5.2.0"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-5-webserver52-openjdk8-tomcat9-openshift-container"
@@ -136,4 +136,4 @@ run:
 osbs:
       repository:
             name: containers/jboss-webserver-5
-            branch: private-szappis-jdk11-openshift-tomcat9-rhel7
+            branch: jb-webserver-5.2-openjdk-8-tomcat-9-openshift-dev-rhel7
