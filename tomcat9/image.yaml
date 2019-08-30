@@ -92,7 +92,7 @@ modules:
       repositories:
           - git:
                   url: https://github.com/jboss-openshift/cct_module.git
-                  ref: master
+                  ref: 0.36.0
       install:
           - name: dynamic-resources
           - name: jboss.container.maven.35.bash
