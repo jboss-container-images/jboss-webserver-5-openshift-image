@@ -104,7 +104,7 @@ modules:
             version: "3.5scl"
           - name: dynamic-resources
           - name: s2i-common
-            #- name: java-alternatives
+          - name: java-alternatives
           - name: os-jws-s2i
           - name: os-jws8-conffiles
           - name: os-jws-deployments
