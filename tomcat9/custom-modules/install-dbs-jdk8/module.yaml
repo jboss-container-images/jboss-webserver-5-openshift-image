@@ -1,5 +1,5 @@
 schema_version: 1
-name: "dbs-jdk8"
+name: "add-dbs-jdk8"
 version: '1.0'
 
 execute:
