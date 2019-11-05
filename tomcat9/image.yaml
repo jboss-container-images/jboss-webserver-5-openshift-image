@@ -109,7 +109,7 @@ modules:
           - name: os-jws-s2i
           - name: os-jws8-conffiles
           - name: os-jws-deployments
-          - name: dbs-jdk8
+          #- name: dbs-jdk8
           - name: os-java-jolokia
           - name: os-jws-jolokia
           - name: os-jws-db-drivers
