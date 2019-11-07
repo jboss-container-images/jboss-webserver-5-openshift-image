@@ -5,18 +5,18 @@
         "annotations": {
             "iconClass": "icon-rh-tomcat",
             "openshift.io/provider-display-name": "Red Hat, Inc.",
-            "description": "Application template for JWS PostgreSQL applications with persistent storage built using S2I.",
-            "tags": "tomcat,tomcat9,java,jboss",
-            "version": "1.2",
-            "openshift.io/display-name": "JBoss Web Server 5.0 Apache Tomcat 9 + PostgreSQL (with https)"
+            "description": "Application template for JWS PostgreSQL applications built using S2I.",
+            "tags": "tomcat,tomcat9,java,jboss,hidden",
+            "version": "1.0",
+            "openshift.io/display-name": "JBoss Web Server 5.2 Apache Tomcat 9 OpenJDK11 + PostgreSQL (Ephemeral with https)"
         },
-        "name": "jws50-tomcat9-postgresql-persistent-s2i"
+        "name": "jws52-tech-preview-openjdk11-tomcat9-postgresql-s2i"
     },
     "labels": {
-        "template": "jws50-tomcat9-postgresql-persistent-s2i",
-        "jws50": "1.2"
+        "template": "jws52-tech-preview-openjdk11-tomcat9-postgresql-s2i",
+        "jws52": "1.0"
     },
-    "message": "A new persistent JWS application for Apache Tomcat 9 (using PostgreSQL) has been created in your project. The username/password for administering your JWS is ${JWS_ADMIN_USERNAME}/${JWS_ADMIN_PASSWORD}. For accessing the PostgreSQL database \"${DB_DATABASE}\" use the credentials ${DB_USERNAME}/${DB_PASSWORD}. Please be sure to create the secret named \"${JWS_HTTPS_SECRET}\" containing the ${JWS_HTTPS_CERTIFICATE} file used for serving secure content.",
+    "message": "A new JWS application for Apache Tomcat 9 (using PostgreSQL) has been created in your project. The username/password for administering your JWS is ${JWS_ADMIN_USERNAME}/${JWS_ADMIN_PASSWORD}. For accessing the PostgreSQL database \"${DB_DATABASE}\" use the credentials ${DB_USERNAME}/${DB_PASSWORD}. Please be sure to create the secret named \"${JWS_HTTPS_SECRET}\" containing the ${JWS_HTTPS_CERTIFICATE} file used for serving secure content.",
     "parameters": [
         {
             "displayName": "Application Name",
@@ -72,13 +72,6 @@
             "description": "Database name",
             "name": "DB_DATABASE",
             "value": "root",
-            "required": true
-        },
-        {
-            "displayName": "Database Volume Capacity",
-            "description": "Size of persistent storage for database volume.",
-            "name": "VOLUME_CAPACITY",
-            "value": "1Gi",
             "required": true
         },
         {
@@ -378,7 +371,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "jboss-webserver50-tomcat9-openshift:1.2"
+                            "name": "jboss-webserver52-tech-preview-openjdk11-tomcat9-openshift:1.0"
                         }
                     }
                 },
@@ -455,7 +448,6 @@
                         }
                     },
                     "spec": {
-                        "terminationGracePeriodSeconds": 60,
                         "containers": [
                             {
                                 "name": "${APPLICATION_NAME}",
@@ -611,7 +603,6 @@
                         }
                     },
                     "spec": {
-                        "terminationGracePeriodSeconds": 60,
                         "containers": [
                             {
                                 "name": "${APPLICATION_NAME}-postgresql",
@@ -636,12 +627,6 @@
                                         "port": 5432
                                     }
                                 },
-                                "volumeMounts": [
-                                    {
-                                        "mountPath": "/var/lib/pgsql/data",
-                                        "name": "${APPLICATION_NAME}-postgresql-pvol"
-                                    }
-                                ],
                                 "env": [
                                     {
                                         "name": "POSTGRESQL_USER",
@@ -667,37 +652,23 @@
                                         "name": "POSTGRESQL_SHARED_BUFFERS",
                                         "value": "${POSTGRESQL_SHARED_BUFFERS}"
                                     }
+                                ],
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/var/lib/pgsql/data",
+                                        "name": "${APPLICATION_NAME}-data"
+                                    }
                                 ]
                             }
                         ],
                         "volumes": [
                             {
-                                "name": "${APPLICATION_NAME}-postgresql-pvol",
-                                "persistentVolumeClaim": {
-                                    "claimName": "${APPLICATION_NAME}-postgresql-claim"
-                                }
+                                "emptyDir": {
+                                    "medium": ""
+                                },
+                                "name": "${APPLICATION_NAME}-data"
                             }
                         ]
-                    }
-                }
-            }
-        },
-        {
-            "apiVersion": "v1",
-            "kind": "PersistentVolumeClaim",
-            "metadata": {
-                "name": "${APPLICATION_NAME}-postgresql-claim",
-                "labels": {
-                    "application": "${APPLICATION_NAME}"
-                }
-            },
-            "spec": {
-                "accessModes": [
-                    "ReadWriteOnce"
-                ],
-                "resources": {
-                    "requests": {
-                        "storage": "${VOLUME_CAPACITY}"
                     }
                 }
             }
