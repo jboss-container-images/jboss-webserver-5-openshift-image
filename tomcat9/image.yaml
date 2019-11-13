@@ -3,7 +3,7 @@ schema_version: 1
 name: "jboss-webserver-5/webserver52-openj9-jdk11-tomcat9-openshift"
 description: "Red Hat JBoss Web Server 5.2 - Tomcat 9 OpenShift container image"
 version: "1.0"
-from: "jboss-webserver-5-webserver52-openj9-jdk11-tomcat9:jb-webserver-5.2-openjdk-11-tomcat-9-dev-rhel7-containers-candidate-76971-20191113092608"
+from: "jboss-webserver-5/webserver52-openj9-jdk11-tomcat9:jb-webserver-5.2-openjdk-11-tomcat-9-dev-rhel7-containers-candidate-76971-20191113092608"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-5-webserver52-openj9-jdk11-tomcat9-openshift-container"
@@ -112,10 +112,10 @@ modules:
           - name: os-jws-deployments
           - name: add-dbs-jdk11-only
           #- name: dbs-jdk8
-          - name: os-java-jolokia
+          - name: jboss.container.jolokia.bash
           - name: os-jws-jolokia
           - name: os-jws-db-drivers
-          - name: os-java-run
+          - name: jboss.container.java.jvm.bash
           - name: os-jws-launch
           - name: os-jws-https
           - name: os-jws-secure-mgmt-console
@@ -124,7 +124,7 @@ modules:
             #- name: jboss-maven
           - name: os-jws-chmod
           - name: openshift-passwd
-          - name: os-logging
+          - name: jboss.container.util.logging.bash
 
 packages:
       install:
