@@ -131,7 +131,7 @@ packages:
           #- rh-mongodb36-mongo-java-driver
           #- postgresql-jdbc
           #- mysql-connector-java
-          - PyYAML
+          - python3-pyyaml
 artifacts:
     - path: tomcat-8-valves-1.0.3.Final-redhat-1.jar
       md5: d506949eb5044fbad5925912db1d0dff
