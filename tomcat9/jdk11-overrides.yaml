@@ -1,0 +1,40 @@
+schema_version: 1
+
+name: "jboss-webserver-5/webserver52-openjdk11-tomcat9-openshift"
+description: "Red Hat JBoss Web Server 5.2 - Tomcat 9 OpenShift container image"
+version: "1.0"
+from: "jboss-webserver-5/webserver52-openjdk11-tomcat9:5.2.0"
+labels:
+    - name: "com.redhat.component"
+      value: "jboss-webserver-5-webserver52-openjdk11-tomcat9-openshift-container"
+modules:
+      repositories:
+          - git:
+                  url: https://github.com/jboss-openshift/cct_module.git
+                  ref: 0.36.0
+          - path: custom-modules
+      install:
+          - name: jboss.container.maven.35.bash
+            version: "3.5scl"
+          - name: dynamic-resources
+          - name: s2i-common
+          - name: os-jws-s2i
+          - name: os-jws8-conffiles
+          - name: os-jws-deployments
+          - name: add-dbs-jdk11-only
+          - name: os-java-jolokia
+          - name: os-jws-jolokia
+          - name: os-jws-db-drivers
+          - name: os-java-run
+          - name: os-jws-launch
+          - name: os-jws-https
+          - name: os-jws-secure-mgmt-console
+          - name: os-jws-rm-root
+          - name: os-jws-rm-defaults
+          - name: os-jws-chmod
+          - name: openshift-passwd
+          - name: os-logging
+osbs:
+      repository:
+            name: containers/jboss-webserver-5
+            branch: jb-webserver-5.2-openjdk-11-tomcat-9-openshift-dev-rhel7

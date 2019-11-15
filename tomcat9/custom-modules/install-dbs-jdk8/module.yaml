@@ -1,0 +1,6 @@
+schema_version: 1
+name: "add-dbs-jdk8"
+version: '1.0'
+
+execute:
+- script: dbs-jdk8.sh
