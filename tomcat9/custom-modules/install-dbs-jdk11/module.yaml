@@ -1,0 +1,6 @@
+schema_version: 1
+name: "add-dbs-jdk11-only"
+version: '1.0'
+
+execute:
+- script: dbs-jdk11.sh

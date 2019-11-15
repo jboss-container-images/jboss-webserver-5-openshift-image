@@ -6,18 +6,18 @@
             "iconClass": "icon-rh-tomcat",
             "openshift.io/provider-display-name": "Red Hat, Inc.",
             "tags": "tomcat,tomcat9,java,jboss",
-            "version": "1.2",
-            "openshift.io/display-name": "JBoss Web Server 5.0 Apache Tomcat 9 (no https)",
+            "version": "1.0",
+            "openshift.io/display-name": "JBoss Web Server 5.2 Apache Tomcat 9 OpenJDK8 (no https)",
             "description": "An example JBoss Web Server application. For more information about using this template, see https://github.com/jboss-openshift/application-templates.",
-            "template.openshift.io/long-description": "This template defines resources needed to develop Red Hat JBoss Web Server 5.0 Apache Tomcat 9 based application, including a build configuration, and an application deployment configuration.",
+            "template.openshift.io/long-description": "This template defines resources needed to develop Red Hat JBoss Web Server 5.2 Apache Tomcat 9 based application, including a build configuration, and an application deployment configuration.",
             "template.openshift.io/documentation-url": "https://access.redhat.com/documentation/en/red-hat-jboss-web-server/",
             "template.openshift.io/support-url": "https://access.redhat.com"
         },
-        "name": "jws50-tomcat9-basic-s2i"
+        "name": "jws52-openjdk8-tomcat9-basic-s2i"
     },
     "labels": {
-        "template": "jws50-tomcat9-basic-s2i",
-        "jws50": "1.2"
+        "template": "jws52-openjdk8-tomcat9-basic-s2i",
+        "jws52": "1.0"
     },
     "message": "A new JWS application for Apache Tomcat 9 has been created in your project. The username/password for administering your JWS is ${JWS_ADMIN_USERNAME}/${JWS_ADMIN_PASSWORD}.",
     "parameters": [
@@ -199,7 +199,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "jboss-webserver50-tomcat9-openshift:1.2"
+                            "name": "jboss-webserver52-openjdk8-tomcat9-openshift:1.0"
                         }
                     }
                 },
