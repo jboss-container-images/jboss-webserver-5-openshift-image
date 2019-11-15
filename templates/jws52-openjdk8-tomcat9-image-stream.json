@@ -1,0 +1,72 @@
+{
+    "kind": "List",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "webserver52-openjdk8-tomcat9-image-stream",
+        "annotations": {
+            "description": "ImageStream definition for Red Hat JBoss Web Server 5.2 Apache Tomcat 9 OpenJDK8.",
+            "openshift.io/provider-display-name": "Red Hat, Inc."
+        }
+    },
+    "items": [
+        {
+            "kind": "ImageStream",
+            "apiVersion": "v1",
+            "metadata": {
+                "name": "jboss-webserver52-openjdk8-tomcat9-openshift",
+                "annotations": {
+                    "openshift.io/display-name": "JBoss Web Server 5.2 Apache Tomcat 9 OpenJDK8",
+                    "openshift.io/provider-display-name": "Red Hat, Inc.",
+                    "version": "1.0"
+                }
+            },
+            "labels": {
+                "jws52": "1.0"
+            },
+            "spec": {
+                "tags": [
+                    {
+                        "name": "latest",
+                        "annotations": {
+                            "description": "JBoss Web Server 5.2 Apache Tomcat 9 OpenJDK8 S2I images.",
+                            "iconClass": "icon-rh-tomcat",
+                            "tags": "builder,tomcat,tomcat9,java,jboss,hidden",
+                            "supports": "tomcat9:5.2,tomcat:9,java:8",
+                            "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
+                            "sampleContextDir": "tomcat-websocket-chat",
+                            "version": "latest",
+                            "openshift.io/display-name": "JBoss Web Server 5.2 Apache Tomcat 9 OpenJDK8"
+                        },
+			"referencePolicy": {
+                            "type": "Local"
+                        },
+                        "from": {
+                            "kind": "DockerImage",
+                            "name": "registry.redhat.io/jboss-webserver-5/webserver52-openjdk8-tomcat9-openshift:latest"
+                        }
+                    },
+                    {
+                        "name": "1.0",
+                        "annotations": {
+                            "description": "JBoss Web Server 5.2 Apache Tomcat 9 OpenJDK8 S2I images.",
+                            "iconClass": "icon-rh-tomcat",
+                            "tags": "builder,tomcat,tomcat9,java,jboss,hidden",
+                            "supports": "tomcat9:5.2,tomcat:9,java:8",
+                            "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
+                            "sampleContextDir": "tomcat-websocket-chat",
+                            "version": "1.0",
+                            "openshift.io/display-name": "JBoss Web Server 5.2 Apache Tomcat 9 OpenJDK8"
+                        },
+			"referencePolicy": {
+                            "type": "Local"
+                        },
+                        "from": {
+                            "kind": "DockerImage",
+                            "name": "registry.redhat.io/jboss-webserver-5/webserver52-openjdk8-tomcat9-openshift:1.0"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
