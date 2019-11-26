@@ -4,5 +4,5 @@ packages:
           url:
             repository: http://s01.yyz.redhat.com/~sgehwolf/openj9/rhel7-jdk11-openj9/java-11-openj9.repo
 ###### This section is for scratch builds out of a private repo
-osbs:
-     koji_target: jb-webserver-5.2-openjdk-11-tomcat-9-openshift-dev-rhel7-containers-candidate
+#osbs:
+#     koji_target: jb-webserver-5.2-openjdk-11-tomcat-9-openshift-dev-rhel7-containers-candidate
