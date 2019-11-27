@@ -1,0 +1,3 @@
+In order to build with cekit (3.6.0) we use the over.yaml file and the command we need is the following
+
+cekit --redhat build --overrides-file over.yaml osbs
