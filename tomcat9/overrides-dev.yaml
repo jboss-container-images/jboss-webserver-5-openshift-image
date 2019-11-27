@@ -1,4 +1,0 @@
-osbs:
-      repository:
-            name: containers/jboss-webserver-5
-            branch: jb-webserver-5.0-tomcat-9-openshift-dev-rhel-7
