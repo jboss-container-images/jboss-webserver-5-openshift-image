@@ -17,7 +17,7 @@
     },
     "labels": {
         "template": "jws52-openj9-tomcat9-rhel8-basic-s2i",
-        "jws52openj9": "1.4"
+        "jws52openj9": "1.5"
     },
     "message": "A new JWS application for Apache Tomcat 9 has been created in your project. The username/password for administering your JWS is ${JWS_ADMIN_USERNAME}/${JWS_ADMIN_PASSWORD}.",
     "parameters": [
