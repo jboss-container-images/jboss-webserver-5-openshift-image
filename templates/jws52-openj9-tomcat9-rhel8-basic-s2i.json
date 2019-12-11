@@ -17,7 +17,7 @@
     },
     "labels": {
         "template": "jws52-openj9-tomcat9-rhel8-basic-s2i",
-        "jws52openj9": "1.5"
+        "jws52openj9": "1.6"
     },
     "message": "A new JWS application for Apache Tomcat 9 has been created in your project. The username/password for administering your JWS is ${JWS_ADMIN_USERNAME}/${JWS_ADMIN_PASSWORD}.",
     "parameters": [
@@ -46,7 +46,7 @@
             "displayName": "Git Reference",
             "description": "Git branch/tag reference",
             "name": "SOURCE_REPOSITORY_REF",
-            "value": "1.2",
+            "value": "master",
             "required": false
         },
         {
@@ -92,7 +92,7 @@
             "displayName": "ImageStream Namespace",
             "description": "Namespace in which the ImageStreams for Red Hat Middleware images are installed. These ImageStreams are normally installed in the openshift namespace. You should only need to modify this if you've installed the ImageStreams in a different namespace/project.",
             "name": "IMAGE_STREAM_NAMESPACE",
-            "value": "openshift",
+            "value": "mmadzin-namespace",
             "required": true
         },
         {
@@ -198,8 +198,8 @@
                         "forcePull": true,
                         "from": {
                             "kind": "ImageStreamTag",
-                            "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "jboss-webserver52-openj9-tomcat9-rhel8-openshift:1.0"
+                            "namespace": "mmadzin-build-namespace",
+                            "name": "jboss-webserver52-openj9-tomcat9-rhel8-openshift:latest"
                         }
                     }
                 },
