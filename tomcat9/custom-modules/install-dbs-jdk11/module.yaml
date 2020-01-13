@@ -2,5 +2,10 @@ schema_version: 1
 name: "add-dbs-jdk11-only"
 version: '1.0'
 
+artifacts:
+    - name: "mysql-connector"
+      url: "https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-8.0.18-1.el7.noarch.rpm"
+      md5: "65751ac7b78d93263ac8f4ab63cadb5e"
+      target: "mysql.rpm"
 execute:
 - script: dbs-jdk11.sh
