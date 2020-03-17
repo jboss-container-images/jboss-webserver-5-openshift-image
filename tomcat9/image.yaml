@@ -94,7 +94,7 @@ modules:
       repositories:
           - git:
                   url: https://github.com/jboss-openshift/cct_module.git
-                  ref: master
+                  ref: 0.39.0
           - path: custom-modules
       install:
           - name: jboss.container.maven.35.bash
@@ -107,6 +107,7 @@ modules:
             version: '1.0'
           - name: os-jws-deployments
           - name: add-dbs-jdk11-only
+            version: '1.0'
           - name: jboss.container.jolokia.bash
           - name: os-jws-jolokia
           - name: os-jws-db-drivers
