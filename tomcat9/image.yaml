@@ -1,16 +1,16 @@
 schema_version: 1
 
-name: "jboss-webserver-5/webserver52-openjdk8-tomcat9-openshift"
-description: "Red Hat JBoss Web Server 5.2 - Tomcat 9 OpenShift container image"
+name: "jboss-webserver-5/webserver53-openjdk8-tomcat9-openshift"
+description: "Red Hat JBoss Web Server 5.3 - Tomcat 9 OpenShift container image"
 version: "1.0"
-from: "jboss-webserver-5/webserver52-openjdk8-tomcat9:5.2.0"
+from: "jboss-webserver-5/webserver53-openjdk8-tomcat9:5.3.0"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-5-webserver52-openjdk8-tomcat9-openshift-container"
+      value: "jboss-webserver-5-webserver53-openjdk8-tomcat9-openshift-container"
     - name: "io.k8s.description"
-      value: "Platform for building and running web applications on JBoss Web Server 5.2 - Tomcat v9"
+      value: "Platform for building and running web applications on JBoss Web Server 5.3 - Tomcat v9"
     - name: "io.k8s.display-name"
-      value: "JBoss Web Server 5.2"
+      value: "JBoss Web Server 5.3"
     - name: "io.openshift.expose-services"
       value: "8080:http"
     - name: "io.openshift.tags"
@@ -27,7 +27,7 @@ envs:
     - name: JWS_ADMIN_PASSWORD
       example: p5sw0rdd
     - name: JWS_HTTPS_CERTIFICATE_DIR
-      example: /opt/jws-5.2/tomcat/conf
+      example: /opt/jws-5.3/tomcat/conf
     - name: JWS_HTTPS_CERTIFICATE
       example: server.crt
     - name: JWS_HTTPS_CERTIFICATE_KEY
@@ -49,12 +49,6 @@ envs:
     - name: SCRIPT_DEBUG
       description: If set to true, ensurses that the bash scripts are executed with the -x option, printing the commands and their arguments as they are executed.
       example: "true"
-    - name: "CONTAINER_HEAP_PERCENT"
-      example: 0.5
-      description: Set the maximum Java heap size, as a percentage of available container memory.
-    - name: "INITIAL_HEAP_PERCENT"
-      example: 0.5
-      description: Set the initial Java heap size, as a percentage of the maximum heap size.
     - name: JAVA_MAX_MEM_RATIO
       description: This is used to calculate a default maximal heap memory based on a containers restriction. If used in a container without any memory constraints for the container then this option has no effect. If there is a memory constraint then `-Xmx` is set to a ratio of the container available memory as set here. The default is `50` which means 50% of the available memory is used as an upper boundary. You can skip this mechanism by setting this value to `0` in which case no `-Xmx` option is added.
       example: "50"
@@ -102,12 +96,13 @@ modules:
           - name: dynamic-resources
           - name: s2i-common
           - name: os-jws-s2i
-          - name: os-jws8-conffiles
+          - name: jws8-conffiles
+            version: "1.0"
           - name: os-jws-deployments
-          - name: os-java-jolokia
+          - name: jboss.container.jolokia.bash
           - name: os-jws-jolokia
           - name: os-jws-db-drivers
-          - name: os-java-run
+          - name: jboss.container.java.jvm.bash
           - name: os-jws-launch
           - name: os-jws-https
           - name: os-jws-secure-mgmt-console
@@ -115,19 +110,14 @@ modules:
           - name: os-jws-rm-defaults
           - name: os-jws-chmod
           - name: openshift-passwd
-          - name: os-logging
+          - name: jboss.container.util.logging.bash
 
 packages:
       install:
           - PyYAML
-artifacts:
-    - path: tomcat-8-valves-1.0.3.Final-redhat-1.jar
-      md5: d506949eb5044fbad5925912db1d0dff
 run:
       user: 185
       cmd:
-          - "/opt/jws-5.2/tomcat/bin/launch.sh"
+          - "/opt/jws-5.3/tomcat/bin/launch.sh"
 osbs:
       repository:
-            name: containers/jboss-webserver-5
-            branch: jb-webserver-5.2-openjdk-8-tomcat-9-openshift-dev-rhel7

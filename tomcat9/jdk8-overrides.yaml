@@ -13,13 +13,16 @@ modules:
           - name: s2i-common
           - name: java-alternatives
           - name: os-jws-s2i
-          - name: os-jws8-conffiles
+          - name: jws8-conffiles
+            version: "1.0"
           - name: os-jws-deployments
-          - name: add-dbs-jdk8
-          - name: os-java-jolokia
+          - name: jboss.container.jolokia.bash
           - name: os-jws-jolokia
+          - name: add-dbs-jdk8
           - name: os-jws-db-drivers
-          - name: os-java-run
+          - name: jws5-logging
+            version: "1.0"
+          - name: jboss.container.java.jvm.bash
           - name: os-jws-launch
           - name: os-jws-https
           - name: os-jws-secure-mgmt-console
@@ -27,8 +30,8 @@ modules:
           - name: os-jws-rm-defaults
           - name: os-jws-chmod
           - name: openshift-passwd
-          - name: os-logging
+          - name: jboss.container.util.logging.bash
 osbs:
       repository:
-            name: containers/jboss-webserver-5
-            branch: jb-webserver-5.2-openjdk-8-tomcat-9-openshift-dev-rhel7
+            name: containers/jboss-webserver-openjdk8-tomcat9
+            branch: jws-5.3-openshift-rhel-7
