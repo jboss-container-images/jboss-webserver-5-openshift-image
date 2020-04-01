@@ -6,7 +6,7 @@ version: "1.0"
 from: "jboss-webserver-5/webserver53-openjdk8-tomcat9:5.3.0"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-5-webserver53-openjdk8-tomcat9-openshift-container"
+      value: "jboss-webserver-5-webserver53-openjdk8-tomcat9-rhel7-openshift-container"
     - name: "io.k8s.description"
       value: "Platform for building and running web applications on JBoss Web Server 5.3 - Tomcat v9"
     - name: "io.k8s.display-name"
@@ -121,3 +121,5 @@ run:
           - "/opt/jws-5.3/tomcat/bin/launch.sh"
 osbs:
       repository:
+            name: containers/jboss-webserver-openjdk8-tomcat9
+            branch: jws-5.3-openshift-rhel-7

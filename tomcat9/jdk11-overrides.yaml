@@ -6,7 +6,7 @@ version: "1.0"
 from: "jboss-webserver-5/webserver53-openjdk11-tomcat9:5.3.0"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-5-webserver53-openjdk11-tomcat9-openshift-container"
+      value: "jboss-webserver-5-webserver53-openjdk11-tomcat9-rhel7-openshift-container"
 modules:
       repositories:
           - git:
