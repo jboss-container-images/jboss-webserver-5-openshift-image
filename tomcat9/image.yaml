@@ -82,6 +82,8 @@ envs:
     - name: "ENABLE_ACCESS_LOG"
       example: "true"
       description: Enable the Access Log.
+    - name: "KUBERNETES_NAMESPACE"
+      value: "tomcat"
 ports:
     - value: 8443
 modules:
