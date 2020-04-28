@@ -5,4 +5,4 @@
 #            repository: http://s01.yyz.redhat.com/~sgehwolf/openj9/jdk11-openj9/java-11-openj9.repo
 ###### This section is for scratch builds from a private branch in distgit
 osbs:
-     koji_target: jws-5.2-openj9-openshift-rhel-8-containers-candidate
+     koji_target: jws-5.3-openj9-openshift-rhel-8-containers-candidate
