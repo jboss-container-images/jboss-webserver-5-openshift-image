@@ -18,7 +18,7 @@
     },
     "labels": {
         "template": "jws53-openj9-tomcat9-rhel7-https-s2i",
-        "jws53openj9el7": "1.0"
+        "jws53openj9el7": "1.1"
     },
     "message": "A new JWS application for Apache Tomcat 9 has been created in your project. The username/password for administering your JWS is ${JWS_ADMIN_USERNAME}/${JWS_ADMIN_PASSWORD}. Please be sure to create the secret named \"${JWS_HTTPS_SECRET}\" containing the ${JWS_HTTPS_CERTIFICATE} file used for serving secure content.",
     "parameters": [
