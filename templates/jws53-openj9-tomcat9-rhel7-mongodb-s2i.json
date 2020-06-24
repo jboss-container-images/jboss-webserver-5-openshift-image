@@ -10,7 +10,7 @@
             "version": "1.0",
             "openshift.io/display-name": "JBoss Web Server 5.3 Apache Tomcat 9 + MongoDB (Ephemeral with https)"
         },
-        "name": "jws50-tomcat9-mongodb-s2i"
+        "name": "jws53-openj9-tomcat9-rhel7-mongodb-s2i"
     },
     "labels": {
         "template": "jws53-openj9-tomcat9-rhel7-mongodb-s2i",
