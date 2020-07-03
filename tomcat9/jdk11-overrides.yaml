@@ -1,12 +1,12 @@
 schema_version: 1
 
-name: "jboss-webserver-5/webserver53-openjdk11-tomcat9-openshift"
-description: "Red Hat JBoss Web Server 5.3 - Tomcat 9 OpenShift container image"
+name: "jboss-webserver-5/webserver54-openjdk11-tomcat9-rhel7-openshift"
+description: "Red Hat JBoss Web Server 5.4 - Tomcat 9 OpenShift container image"
 version: "1.0"
-from: "jboss-webserver-5/webserver53-openjdk11-tomcat9:5.3.1"
+from: "jboss-webserver-5/webserver54-openjdk11-tomcat9:5.4.0"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-5-webserver53-openjdk11-tomcat9-rhel7-openshift-container"
+      value: "jboss-webserver-5-webserver54-openjdk11-tomcat9-rhel7-openshift-container"
 modules:
       repositories:
           - git:
@@ -40,4 +40,4 @@ modules:
 osbs:
       repository:
             name: containers/jboss-webserver-openjdk11-tomcat9
-            branch: jws-5.3-openshift-rhel-7
+            branch: jws-5.4-openshift-rhel-7
