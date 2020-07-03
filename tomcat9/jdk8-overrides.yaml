@@ -2,13 +2,18 @@ schema_version: 1
 
 modules:
       repositories:
-          - git:
+          - name: cct_module
+            git:
                   url: https://github.com/jboss-openshift/cct_module.git
-                  ref: 0.36.0
+                  ref: 0.39.0
           - path: custom-modules
+          - name: jboss-eap-modules
+            git:
+                  url: https://github.com/jboss-container-images/jboss-eap-modules.git
+                  ref: master
       install:
           - name: jboss.container.maven.35.bash
-            version: "3.5scl"
+            version: "3.5"
           - name: dynamic-resources
           - name: s2i-common
           - name: java-alternatives
@@ -18,8 +23,6 @@ modules:
           - name: os-jws-deployments
           - name: jboss.container.jolokia.bash
           - name: os-jws-jolokia
-          - name: add-dbs-jdk8
-          - name: os-jws-db-drivers
           - name: jws5-logging
             version: "1.0"
           - name: jboss.container.java.jvm.bash
@@ -31,7 +34,9 @@ modules:
           - name: os-jws-chmod
           - name: openshift-passwd
           - name: jboss.container.util.logging.bash
+          - name: os-eap-python
+            version: "3.6"
 osbs:
       repository:
             name: containers/jboss-webserver-openjdk8-tomcat9
-            branch: jws-5.3-openshift-rhel-7
+            branch: jws-5.4-openshift-rhel-8
