@@ -21,7 +21,7 @@
                 }
             },
             "labels": {
-                "jws53openj9el7": "1.1"
+                "jws53openj9el7": "1.2"
             },
             "spec": {
                 "tags": [
@@ -42,7 +42,7 @@
                         },
                         "from": {
                             "kind": "DockerImage",
-                            "name": "registry.redhat.io/jboss-webserver-5/webserver53-openj9-tomcat9-rhel7-openshift:latest"
+                            "name": "registry.redhat.io/jboss-webserver-5/webserver53-openj9-tomcat9-openshift-rhel7:latest"
                         },
       "importPolicy": {
                         "insecure": true
@@ -51,21 +51,21 @@
                     {
                         "name": "1.0",
                         "annotations": {
-                            "description": "JBoss Web Server 5.0 Apache Tomcat 9 S2I images.",
+                            "description": "JBoss Web Server 5.3 Apache Tomcat 9 S2I images.",
                             "iconClass": "icon-rh-tomcat",
                             "tags": "builder,tomcat,tomcat9,java,jboss,hidden",
-                            "supports": "tomcat9:5.0,tomcat:9,java:8",
+                            "supports": "tomcat9:5.3,tomcat:9,java:11",
                             "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
                             "sampleContextDir": "tomcat-websocket-chat",
                             "version": "1.0",
-                            "openshift.io/display-name": "JBoss Web Server 5.0 Apache Tomcat 9"
+                            "openshift.io/display-name": "JBoss Web Server 5.3 Apache Tomcat 9"
                         },
 			"referencePolicy": {
                            "type": "Local"
                         },
                         "from": {
                             "kind": "DockerImage",
-                            "name": "registry.redhat.io/jboss-webserver-5/webserver53-openj9-tomcat9-rhel7-openshift:1.0"
+                            "name": "registry.redhat.io/jboss-webserver-5/webserver53-openj9-tomcat9-openshift-rhel7:1.0"
                         },
       "importPolicy": {
                         "insecure": true
