@@ -138,6 +138,10 @@
         <Valve className="org.apache.catalina.valves.ErrorReportValve" showReport="##TOMCAT_SHOW_REPORT##"
                showServerInfo="##TOMCAT_SHOW_SERVER_INFO##" />
 
+        <!-- ##HEALTH_CHECK_VALVE## -->
+
+        <Valve className="org.apache.catalina.valves.HealthCheckValve" />
+
       </Host>
     </Engine>
   </Service>
