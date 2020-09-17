@@ -105,6 +105,8 @@ modules:
           - name: os-jws-s2i
           - name: jws8-conffiles
             version: "1.0"
+          - name: rm-manager
+            version: "1.0"
           - name: os-jws-deployments
           - name: jboss.container.jolokia.bash
           - name: os-jws-jolokia
