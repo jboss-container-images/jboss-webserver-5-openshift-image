@@ -1,6 +1,6 @@
 #!/bin/sh
-#Remove manager webapp from openshift image
+# Remove manager webapp from openshift image
 set -e
 
 # https://issues.redhat.com/browse/JWS-1829
-rm $JWS_HOME/webapps/manager
+rm -rf $JWS_HOME/webapps/manager
