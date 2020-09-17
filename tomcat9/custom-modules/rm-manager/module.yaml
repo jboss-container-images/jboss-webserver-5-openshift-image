@@ -1,0 +1,7 @@
+schema_version: 1
+name: rm-manager
+version: '1.0'
+description: Removes manager webapp - Relates to JWS-1829.
+
+execute:
+- script: run.sh 
