@@ -109,7 +109,8 @@ modules:
           - name: jboss.container.java.jvm.bash
           - name: os-jws-launch
           - name: os-jws-https
-          - name: os-jws-secure-mgmt-console
+          - name: jws-secure-mgmt-console
+            version: "1.0"
           - name: os-jws-rm-root
           - name: os-jws-rm-defaults
           - name: os-jws-chmod
