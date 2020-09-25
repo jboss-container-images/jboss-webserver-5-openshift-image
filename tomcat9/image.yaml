@@ -1,16 +1,16 @@
 schema_version: 1
 
-name: "jboss-webserver-5/webserver53-openj9-tomcat9-rhel8-openshift"
-description: "Red Hat JBoss Web Server 5.3 - Tomcat 9 OpenShift container image"
+name: "jboss-webserver-5/webserver54-openj9-tomcat9-rhel8-openshift"
+description: "Red Hat JBoss Web Server 5.4 - Tomcat 9 OpenShift container image"
 version: "1.0"
-from: "jboss-webserver-5/webserver53-openj9-tomcat9-rhel8:5.3.0"
+from: "jboss-webserver-5/webserver54-openj9-tomcat9-rhel8:5.4.0"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-5-webserver53-openj9-tomcat9-rhel8-openshift-container"
+      value: "jboss-webserver-5-webserver54-openj9-tomcat9-rhel8-openshift-container"
     - name: "io.k8s.description"
-      value: "Platform for building and running web applications on JBoss Web Server 5.3 - Tomcat v9"
+      value: "Platform for building and running web applications on JBoss Web Server 5.4 - Tomcat v9"
     - name: "io.k8s.display-name"
-      value: "JBoss Web Server 5.3"
+      value: "JBoss Web Server 5.4"
     - name: "io.openshift.expose-services"
       value: "8080:http"
     - name: "io.openshift.tags"
@@ -27,7 +27,7 @@ envs:
     - name: JWS_ADMIN_PASSWORD
       example: p5sw0rdd
     - name: JWS_HTTPS_CERTIFICATE_DIR
-      example: /opt/jws-5.3/tomcat/conf
+      example: /opt/jws-5.4/tomcat/conf
     - name: JWS_HTTPS_CERTIFICATE
       example: server.crt
     - name: JWS_HTTPS_CERTIFICATE_KEY
@@ -92,9 +92,14 @@ ports:
     - value: 8443
 modules:
       repositories:
-          - git:
+          - name: cct_module
+            git:
                   url: https://github.com/jboss-openshift/cct_module.git
                   ref: 0.39.0
+          - name: jboss-eap-modules
+            git:
+                  url: https://github.com/jboss-container-images/jboss-eap-modules.git
+                  ref: master
           - path: custom-modules
       install:
           - name: jboss.container.maven.35.bash
@@ -117,15 +122,18 @@ modules:
           - name: os-jws-chmod
           - name: openshift-passwd
           - name: jboss.container.util.logging.bash
+          - name: os-eap-python
+            version: "3.6"
 
 packages:
+      content_sets_file: content_sets.yml
       install:
           - python3-pyyaml
 run:
       user: 185
       cmd:
-          - "/opt/jws-5.3/tomcat/bin/launch.sh"
+          - "/opt/jws-5.4/tomcat/bin/launch.sh"
 osbs:
       repository:
             name: containers/jboss-webserver-openj9-tomcat9
-            branch: jws-5.3-openshift-rhel-8
+            branch: jws-5.4-openshift-rhel-8
