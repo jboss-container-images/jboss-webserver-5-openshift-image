@@ -1,4 +1,4 @@
-# Red Hat JBoss Web Server 5.3 OpenShift container image
+# Red Hat JBoss Web Server 5.4 OpenShift container image
 
 Components are available in the tomcat9 directory.
 
