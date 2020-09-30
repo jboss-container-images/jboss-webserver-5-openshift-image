@@ -13,7 +13,7 @@
             "kind": "ImageStream",
             "apiVersion": "v1",
             "metadata": {
-                "name": "jboss-webserver54-openjdk11-tomcat9-ubi8-openshift",
+                "name": "jboss-webserver54-openjdk11-tomcat9-openshift-ubi8",
                 "annotations": {
                     "openshift.io/display-name": "JBoss Web Server 5.4 Apache Tomcat 9 OpenJDK11 on UBI8",
                     "openshift.io/provider-display-name": "Red Hat, Inc.",
