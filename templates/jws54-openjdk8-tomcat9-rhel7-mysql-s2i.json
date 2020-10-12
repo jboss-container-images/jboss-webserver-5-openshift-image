@@ -477,7 +477,7 @@
                                         "command": [
                                             "/bin/bash",
                                             "-c",
-                                            "curl --noproxy '*' -is 'http://localhost:8080/health' | grep -iq '"status": "UP"'"
+                                            "curl --noproxy '*' -is 'http://localhost:8080/health' | grep -iq '\"status\": \"UP\"'"
                                         ]
                                     }
                                 },
