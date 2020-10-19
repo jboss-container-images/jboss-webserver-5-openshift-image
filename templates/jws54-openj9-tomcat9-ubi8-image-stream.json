@@ -2,9 +2,9 @@
     "kind": "List",
     "apiVersion": "v1",
     "metadata": {
-        "name": "webserver54-openj9-tomcat9-rhel8-image-stream",
+        "name": "webserver54-openj9-tomcat9-ubi8-image-stream",
         "annotations": {
-            "description": "ImageStream definition for Red Hat JBoss Web Server 5.4 Apache Tomcat 9 with openj9.",
+            "description": "ImageStream definition for Red Hat JBoss Web Server 5.4 Apache Tomcat 9 with OpenJ9 JDK11 on UBI8.",
             "openshift.io/provider-display-name": "Red Hat, Inc."
         }
     },
@@ -13,7 +13,7 @@
             "kind": "ImageStream",
             "apiVersion": "v1",
             "metadata": {
-                "name": "jboss-webserver54-openj9-tomcat9-rhel8-openshift",
+                "name": "jboss-webserver54-openj9-tomcat9-openshift-ubi8",
                 "annotations": {
                     "openshift.io/display-name": "JBoss Web Server 5.4 Apache Tomcat 9 OpenJ9 JDK11",
                     "openshift.io/provider-display-name": "Red Hat, Inc.",
@@ -21,21 +21,21 @@
                 }
             },
             "labels": {
-                "jws54openj9el8": "1.0"
+                "jws54openj9ubi8": "1.0"
             },
             "spec": {
                 "tags": [
                     {
                         "name": "latest",
                         "annotations": {
-                            "description": "JBoss Web Server 5.4 Apache Tomcat 9 OpenJ9 S2I images.",
+                            "description": "JBoss Web Server 5.4 Apache Tomcat 9 OpenJ9 JDK11 on UBI8 S2I images.",
                             "iconClass": "icon-rh-tomcat",
                             "tags": "builder,tomcat,tomcat9,java,jboss,hidden",
                             "supports": "tomcat9:5.4,tomcat:9,java:11",
                             "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
                             "sampleContextDir": "tomcat-websocket-chat",
                             "version": "latest",
-                            "openshift.io/display-name": "JBoss Web Server 5.4 Apache Tomcat 9 OpenJ9 JDK11"
+                            "openshift.io/display-name": "JBoss Web Server 5.4 Apache Tomcat 9 OpenJ9 JDK11 on UBI8"
                         },
 			"referencePolicy": {
                             "type": "Local"
@@ -51,14 +51,14 @@
                     {
                         "name": "1.0",
                         "annotations": {
-                            "description": "JBoss Web Server 5.4 Apache Tomcat 9 OpenJ9 S2I images.",
+                            "description": "JBoss Web Server 5.4 Apache Tomcat 9 OpenJ9 JDK11 on UBI8 S2I images.",
                             "iconClass": "icon-rh-tomcat",
                             "tags": "builder,tomcat,tomcat9,java,jboss,hidden",
                             "supports": "tomcat9:5.4,tomcat:9,java:11",
                             "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
                             "sampleContextDir": "tomcat-websocket-chat",
                             "version": "1.0",
-                            "openshift.io/display-name": "JBoss Web Server 5.4 Apache Tomcat 9 OpenJ9 JDK11"
+                            "openshift.io/display-name": "JBoss Web Server 5.4 Apache Tomcat 9 OpenJ9 JDK11 on UBI8"
                         },
 			"referencePolicy": {
                             "type": "Local"
