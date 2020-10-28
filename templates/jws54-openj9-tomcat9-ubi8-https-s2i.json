@@ -282,7 +282,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "jboss-webserver54-openj9-tomcat9-rhel8-openshift:1.0"
+                            "name": "jboss-webserver54-openj9-tomcat9-openshift-ubi8:1.0"
                         }
                     }
                 },
@@ -370,7 +370,7 @@
                                         "command": [
                                             "/bin/bash",
                                             "-c",
-                                            "curl --noproxy '*' -s -u ${JWS_ADMIN_USERNAME}:${JWS_ADMIN_PASSWORD} 'http://localhost:8080/manager/jmxproxy/?get=Catalina%3Atype%3DServer&att=stateName' |grep -iq 'stateName *= *STARTED'"
+                                            "curl --noproxy '*' -is 'http://localhost:8080/health' | grep -iq '\"status\": \"UP\"'"
                                         ]
                                     }
                                 },
