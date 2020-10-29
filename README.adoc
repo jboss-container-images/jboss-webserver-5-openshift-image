@@ -1,4 +1,4 @@
-# Red Hat JBoss Web Server 5.4 OpenShift container image
+# Red Hat JBoss Web Server 5.4 OpenShift container image on UBI8
 
 Components are available in the tomcat9 directory.
 

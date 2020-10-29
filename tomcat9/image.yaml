@@ -1,7 +1,7 @@
 schema_version: 1
 
 name: "jboss-webserver-5/webserver54-openj9-tomcat9-rhel8-openshift"
-description: "Red Hat JBoss Web Server 5.4 - Tomcat 9 OpenShift container image"
+description: "Red Hat JBoss Web Server 5.4 - Tomcat 9 OpenShift container image on UBI8"
 version: "1.0"
 from: "jboss-webserver-5/webserver54-openj9-tomcat9-rhel8:5.4.0"
 labels:
@@ -110,13 +110,16 @@ modules:
           - name: os-jws-s2i
           - name: jws8-conffiles
             version: '1.0'
+          - name: rm-manager
+            version: "1.0"
           - name: os-jws-deployments
           - name: jboss.container.jolokia.bash
           - name: os-jws-jolokia
           - name: jboss.container.java.jvm.bash
           - name: os-jws-launch
           - name: os-jws-https
-          - name: os-jws-secure-mgmt-console
+          - name: jws-secure-mgmt-console
+            version: "1.0"
           - name: os-jws-rm-root
           - name: os-jws-rm-defaults
           - name: os-jws-chmod
