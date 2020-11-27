@@ -14,7 +14,7 @@
             "template.openshift.io/support-url": "https://access.redhat.com"
 
         },
-        "name": "jws53-openjdk11-tomcat9-rhel7-https-s2i"
+        "name": "jws54-openjdk11-tomcat9-rhel7-https-s2i"
     },
     "labels": {
         "template": "jws54-openjdk11-tomcat9-rhel7-https-s2i",
