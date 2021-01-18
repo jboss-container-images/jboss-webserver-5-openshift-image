@@ -3,7 +3,7 @@ schema_version: 1
 name: "jboss-webserver-5/webserver54-openjdk11-tomcat9-rhel8-openshift"
 description: "Red Hat JBoss Web Server 5.4 - Tomcat 9 OpenShift container image with OpenJDK11 on UBI8"
 version: "1.0"
-from: "jboss-webserver-5/webserver54-openjdk11-tomcat9-rhel8:5.4.0"
+from: "jboss-webserver-5/webserver54-openjdk11-tomcat9-rhel8:5.4.1"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-5-webserver54-openjdk11-tomcat9-rhel8-openshift-container"
