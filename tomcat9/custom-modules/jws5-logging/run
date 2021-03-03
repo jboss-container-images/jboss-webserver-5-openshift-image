@@ -4,7 +4,6 @@ set -e
 
 SCRIPT_DIR="$(dirname $0)"
 ADDED_DIR="$SCRIPT_DIR/added"
-JWS_HOME=/opt/jws-5.4/tomcat
 
 # Replace default logging.properties file to get logs in stdout
 rm "$JWS_HOME/conf/logging.properties"

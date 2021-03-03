@@ -1,16 +1,16 @@
 schema_version: 1
 
-name: "jboss-webserver-5/webserver54-openjdk8-tomcat9-rhel8-openshift"
-description: "Red Hat JBoss Web Server 5.4 - Tomcat 9 OpenShift container image with OpenJDK8 on UBI8"
+name: "jboss-webserver-5/webserver55-openjdk8-tomcat9-rhel8-openshift"
+description: "Red Hat JBoss Web Server 5.5 - Tomcat 9 OpenShift container image with OpenJDK8 on UBI8"
 version: "1.0"
-from: "jboss-webserver-5/webserver54-openjdk8-tomcat9-rhel8:5.4.1"
+from: "jboss-webserver-5/webserver55-openjdk8-tomcat9-rhel8:5.5.0"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-5-webserver54-openjdk8-tomcat9-rhel8-openshift-container"
+      value: "jboss-webserver-5-webserver55-openjdk8-tomcat9-rhel8-openshift-container"
     - name: "io.k8s.description"
-      value: "Platform for building and running web applications on JBoss Web Server 5.4 with OpenJDK8 - Tomcat v9"
+      value: "Platform for building and running web applications on JBoss Web Server 5.5 with OpenJDK8 - Tomcat v9"
     - name: "io.k8s.display-name"
-      value: "JBoss Web Server 5.4 OpenJDK8"
+      value: "JBoss Web Server 5.5 OpenJDK8"
     - name: "io.openshift.expose-services"
       value: "8080:http"
     - name: "io.openshift.tags"
@@ -27,7 +27,7 @@ envs:
     - name: JWS_ADMIN_PASSWORD
       example: p5sw0rdd
     - name: JWS_HTTPS_CERTIFICATE_DIR
-      example: /opt/jws-5.4/tomcat/conf
+      example: /opt/jws-5.5/tomcat/conf
     - name: JWS_HTTPS_CERTIFICATE
       example: server.crt
     - name: JWS_HTTPS_CERTIFICATE_KEY
@@ -115,7 +115,6 @@ modules:
           - name: os-jws-https
           - name: jws-secure-mgmt-console
             version: "1.0"
-          - name: os-jws-rm-root
           - name: os-jws-rm-defaults
           - name: os-jws-chmod
           - name: openshift-passwd
@@ -129,8 +128,8 @@ packages:
 run:
       user: 185
       cmd:
-          - "/opt/jws-5.4/tomcat/bin/launch.sh"
+          - "/opt/jws-5.5/tomcat/bin/launch.sh"
 osbs:
       repository:
             name: containers/jboss-webserver-openjdk8-tomcat9
-            branch: jws-5.4-openshift-rhel-8
+            branch: jws-5.5-openshift-rhel-8

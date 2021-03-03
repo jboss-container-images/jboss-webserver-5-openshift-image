@@ -1,12 +1,12 @@
 schema_version: 1
 
-name: "jboss-webserver-5/webserver54-openjdk11-tomcat9-rhel8-openshift"
-description: "Red Hat JBoss Web Server 5.4 - Tomcat 9 OpenShift container image with OpenJDK11 on UBI8"
+name: "jboss-webserver-5/webserver55-openjdk11-tomcat9-rhel8-openshift"
+description: "Red Hat JBoss Web Server 5.5 - Tomcat 9 OpenShift container image with OpenJDK11 on UBI8"
 version: "1.0"
-from: "jboss-webserver-5/webserver54-openjdk11-tomcat9-rhel8:5.4.1"
+from: "jboss-webserver-5/webserver55-openjdk11-tomcat9-rhel8:5.5.0"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-5-webserver54-openjdk11-tomcat9-rhel8-openshift-container"
+      value: "jboss-webserver-5-webserver55-openjdk11-tomcat9-rhel8-openshift-container"
 modules:
       repositories:
           - name: cct_module
@@ -39,7 +39,6 @@ modules:
           - name: os-jws-https
           - name: jws-secure-mgmt-console
             version: "1.0"
-          - name: os-jws-rm-root
           - name: os-jws-rm-defaults
           - name: os-jws-chmod
           - name: openshift-passwd
@@ -49,4 +48,4 @@ modules:
 osbs:
       repository:
             name: containers/jboss-webserver-openjdk11-tomcat9
-            branch: jws-5.4-openshift-rhel-8
+            branch: jws-5.5-openshift-rhel-8
