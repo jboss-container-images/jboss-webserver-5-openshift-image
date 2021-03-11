@@ -1,0 +1,10 @@
+#!/bin/sh
+# logging for JWS
+set -e
+
+SCRIPT_DIR="$(dirname $0)"
+ADDED_DIR="$SCRIPT_DIR/added"
+
+# Replace default logging.properties file to get logs in stdout
+rm "$JWS_HOME/conf/logging.properties"
+cp -p "$ADDED_DIR/logging.properties" "$JWS_HOME/conf/"

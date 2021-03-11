@@ -1,0 +1,13 @@
+# See https://osbs.readthedocs.io/en/latest/users.html?highlight=container.yaml#image-configuration
+# for more information on maintaining this file and the format and examples
+
+---
+compose:
+  # used for verifying packages in yum repositories are signed with expected signing keys
+  signing_intent: release
+  # used for requesting ODCS compose of type "pulp"
+  pulp_repos: true
+platforms:
+  only:
+    - s390x
+    - ppc64le
