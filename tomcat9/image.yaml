@@ -88,6 +88,7 @@ envs:
     - name: "ENABLE_ACCESS_LOG"
       example: "true"
       description: Enable the Access Log.
+
 ports:
     - value: 8443
 modules:
@@ -100,6 +101,10 @@ modules:
             git:
                   url: https://github.com/jboss-container-images/jboss-eap-modules.git
                   ref: master
+          - name: jboss-jws-modules
+            git:
+                  url: https://github.com/web-servers/jboss-jws-container-images-modules
+                  ref: main
           - path: custom-modules
       install:
           - name: jboss.container.maven.35.bash
@@ -108,20 +113,29 @@ modules:
           - name: dynamic-resources
           - name: s2i-common
           - name: os-jws-s2i
+            version: "3.0"
           - name: jws8-conffiles
             version: '1.0'
           - name: rm-manager
             version: "1.0"
           - name: os-jws-deployments
+            version: "3.0"
           - name: jboss.container.jolokia.bash
           - name: os-jws-jolokia
+            version: "3.0"
           - name: jboss.container.java.jvm.bash
           - name: os-jws-launch
+            version: "3.0"
           - name: os-jws-https
+            version: "3.0"
           - name: jws-secure-mgmt-console
             version: "1.0"
+          - name: os-jws-rm-root
+            version: "3.0"
           - name: os-jws-rm-defaults
+            version: "3.0"
           - name: os-jws-chmod
+            version: "3.0"
           - name: openshift-passwd
           - name: jboss.container.util.logging.bash
           - name: os-eap-python
