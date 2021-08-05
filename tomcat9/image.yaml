@@ -1,16 +1,16 @@
 schema_version: 1
 
-name: "jboss-webserver-5/webserver55-openjdk8-tomcat9-rhel8-openshift"
-description: "Red Hat JBoss Web Server 5.5 - Tomcat 9 OpenShift container image with OpenJDK8 on UBI8"
-version: "1.0"
-from: "jboss-webserver-5/webserver55-openjdk8-tomcat9-rhel8:5.5.0"
+name: "jboss-webserver-5/jws56-openjdk8-rhel8-openshift"
+description: "Red Hat JBoss Web Server 5.6 - Tomcat 9 OpenShift container image with OpenJDK8 on UBI8"
+version: "5.6.0"
+from: "jboss-webserver-5/webserver56-openjdk8-tomcat9-rhel8:5.6.0"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-5-webserver55-openjdk8-tomcat9-rhel8-openshift-container"
+      value: "jboss-webserver-56-openjdk8-rhel8-openshift-container"
     - name: "io.k8s.description"
-      value: "Platform for building and running web applications on JBoss Web Server 5.5 with OpenJDK8 - Tomcat v9"
+      value: "Platform for building and running web applications on JBoss Web Server 5.6 with OpenJDK8 - Tomcat v9"
     - name: "io.k8s.display-name"
-      value: "JBoss Web Server 5.5 OpenJDK8"
+      value: "JBoss Web Server 5.6 OpenJDK8"
     - name: "io.openshift.expose-services"
       value: "8080:http"
     - name: "io.openshift.tags"
@@ -22,12 +22,8 @@ labels:
 envs:
     - name: "STI_BUILDER"
       value: "jee"
-    - name: JWS_ADMIN_USERNAME
-      example: jwsadmin
-    - name: JWS_ADMIN_PASSWORD
-      example: p5sw0rdd
     - name: JWS_HTTPS_CERTIFICATE_DIR
-      example: /opt/jws-5.5/tomcat/conf
+      example: /opt/jws-5.6/tomcat/conf
     - name: JWS_HTTPS_CERTIFICATE
       example: server.crt
     - name: JWS_HTTPS_CERTIFICATE_KEY
@@ -106,42 +102,51 @@ modules:
           - name: dynamic-resources
           - name: s2i-common
           - name: os-jws-s2i
-            version: "2.0"
+            version: "3.0"
           - name: jws8-conffiles
             version: "1.0"
           - name: rm-manager
             version: "1.0"
           - name: os-jws-deployments
-            version: "2.0"
+            version: "3.0"
           - name: jboss.container.jolokia.bash
           - name: os-jws-jolokia
-            version: "2.0"
+            version: "3.0"
           - name: jboss.container.java.jvm.bash
           - name: os-jws-launch
-            version: "2.0"
+            version: "3.0"
           - name: os-jws-https
-            version: "2.0"
-          - name: jws-secure-mgmt-console
-            version: "1.0"
+            version: "3.0"
           - name: os-jws-rm-root
-            version: "2.0"
+            version: "3.0"
           - name: os-jws-rm-defaults
-            version: "2.0"
+            version: "3.0"
           - name: os-jws-chmod
-            version: "2.0"
+            version: "3.0"
           - name: openshift-passwd
           - name: jboss.container.util.logging.bash
           - name: os-eap-python
             version: "3.6"
 
 packages:
+      content_sets:
+        x86_64:
+          - rhel-8-for-x86_64-baseos-rpms
+          - rhel-8-for-x86_64-appstream-rpms
       install:
           - python3-pyyaml
 run:
       user: 185
       cmd:
-          - "/opt/jws-5.5/tomcat/bin/launch.sh"
+          - "/opt/jws-5.6/tomcat/bin/launch.sh"
 osbs:
       repository:
             name: containers/jboss-webserver-openjdk8-tomcat9
-            branch: jws-5.5-openshift-rhel-8
+            branch: jws-5.6-openshift-rhel-8
+      configuration:
+          container:
+              compose:
+                  pulp_repos: true
+              platforms:
+                  only:
+                      - x86_64

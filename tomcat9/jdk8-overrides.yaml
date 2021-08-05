@@ -6,7 +6,6 @@ modules:
             git:
                   url: https://github.com/jboss-openshift/cct_module.git
                   ref: 0.39.0
-          - path: custom-modules
           - name: jboss-eap-modules
             git:
                   url: https://github.com/jboss-container-images/jboss-eap-modules.git
@@ -15,6 +14,7 @@ modules:
             git:
                   url: https://github.com/web-servers/jboss-jws-container-images-modules
                   ref: main
+          - path: custom-modules
       install:
           - name: jboss.container.maven.35.bash
             version: "3.5"
@@ -22,31 +22,29 @@ modules:
           - name: s2i-common
           - name: java-alternatives
           - name: os-jws-s2i
-            version: "2.0"
+            version: "3.0"
           - name: jws8-conffiles
             version: "1.0"
           - name: rm-manager
             version: "1.0"
           - name: os-jws-deployments
-            version: "2.0"
+            version: "3.0"
           - name: jboss.container.jolokia.bash
           - name: os-jws-jolokia
-            version: "2.0"
+            version: "3.0"
           - name: jws5-logging
             version: "1.0"
           - name: jboss.container.java.jvm.bash
           - name: os-jws-launch
-            version: "2.0"
+            version: "3.0"
           - name: os-jws-https
-            version: "2.0"
-          - name: jws-secure-mgmt-console
-            version: "1.0"
+            version: "3.0"
           - name: os-jws-rm-root
-            version: "2.0"
+            version: "3.0"
           - name: os-jws-rm-defaults
-            version: "2.0"
+            version: "3.0"
           - name: os-jws-chmod
-            version: "2.0"
+            version: "3.0"
           - name: openshift-passwd
           - name: jboss.container.util.logging.bash
           - name: os-eap-python
@@ -54,4 +52,4 @@ modules:
 osbs:
       repository:
             name: containers/jboss-webserver-openjdk8-tomcat9
-            branch: jws-5.5-openshift-rhel-8
+            branch: jws-5.6-openshift-rhel-8
