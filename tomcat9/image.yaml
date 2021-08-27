@@ -109,6 +109,8 @@ modules:
             version: "1.0"
           - name: os-jws-deployments
             version: "3.0"
+          - name: os-jws-hello
+            version: "3.0"
           - name: jboss.container.jolokia.bash
           - name: os-jws-jolokia
             version: "3.0"
