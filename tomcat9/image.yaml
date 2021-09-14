@@ -1,12 +1,12 @@
 schema_version: 1
 
-name: "jboss-webserver-5/webserver56-openj9-rhel8-openshift"
-description: "Red Hat JBoss Web Server 5.6 - Tomcat 9 OpenShift container image on UBI8"
+name: "jboss-webserver-5/jws56-openj9-11-openshift-rhel8"
+description: "Red Hat JBoss Web Server 5.6 - Tomcat 9 OpenShift container image with Eclipse OpenJ9 on UBI8"
 version: "5.6.0"
 from: "jboss-webserver-5/webserver56-openj9-tomcat9-rhel8:5.6.0"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-5-webserver56-openj9-rhel8-openshift-container"
+      value: "jboss-webserver-56-openj9-11-rhel8-openshift-container"
     - name: "io.k8s.description"
       value: "Platform for building and running web applications on JBoss Web Server 5.6 with OpenJ9 - Tomcat v9"
     - name: "io.k8s.display-name"
@@ -121,7 +121,7 @@ modules:
           - name: os-jws-deployments
             version: "3.0"
           - name: os-jws-hello
-             version: "3.0"
+            version: "3.0"
           - name: jboss.container.jolokia.bash
           - name: os-jws-jolokia
             version: "3.0"
