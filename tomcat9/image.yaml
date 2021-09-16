@@ -132,6 +132,8 @@ modules:
             version: "3.0"
           - name: jws-secure-mgmt-console
             version: "1.0"
+          - name: os-jws-rm-root
+            version: "3.0"
           - name: os-jws-rm-defaults
             version: "3.0"
           - name: os-jws-chmod
