@@ -17,7 +17,7 @@
                 "annotations": {
                     "openshift.io/display-name": "JBoss Web Server 5.6 Apache Tomcat 9 OpenJDK8 on UBI8",
                     "openshift.io/provider-display-name": "Red Hat, Inc.",
-                    "version": "5.6.0"
+                    "version": "5.6"
                 }
             },
             "labels": {
@@ -54,7 +54,7 @@
                             "supports": "tomcat9:5.6,tomcat:9,java:8",
                             "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
                             "sampleContextDir": "tomcat-websocket-chat",
-                            "version": "1.0",
+                            "version": "1.2",
                             "openshift.io/display-name": "JBoss Web Server 5.6 Apache Tomcat 9 OpenJDK8 on UBI8"
                         },
 			"referencePolicy": {
