@@ -7,6 +7,10 @@ from: "jboss-webserver-5/webserver56-openjdk11-tomcat9-rhel8:5.6.1"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-56-openjdk11-rhel8-openshift-container"
+    - name: "io.k8s.description"
+      value: "Platform for building and running web applications on JBoss Web Server 5.6 with OpenJDK11 - Tomcat v9"
+    - name: "io.k8s.display-name"
+      value: "JBoss Web Server 5.6 OpenJDK11"
 modules:
       repositories:
           - name: cct_module
