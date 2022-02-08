@@ -131,10 +131,7 @@ modules:
             version: "3.6"
 
 packages:
-      content_sets:
-        x86_64:
-          - rhel-8-for-x86_64-baseos-rpms
-          - rhel-8-for-x86_64-appstream-rpms
+      content_sets_file: content_sets.yml
       install:
           - python3-pyyaml
 run:
@@ -152,3 +149,5 @@ osbs:
               platforms:
                   only:
                       - x86_64
+                      - s390x
+                      - ppc64le
