@@ -66,3 +66,12 @@ osbs:
       repository:
             name: containers/jboss-webserver-openjdk11-tomcat9
             branch: jws-5.6-openshift-rhel-8
+      configuration:
+          container:
+              compose:
+                  pulp_repos: true
+              platforms:
+                  only:
+                      - x86_64
+                      - s390x
+                      - ppc64le
