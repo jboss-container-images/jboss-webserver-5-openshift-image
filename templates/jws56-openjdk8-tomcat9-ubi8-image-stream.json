@@ -37,7 +37,7 @@
                             "version": "latest",
                             "openshift.io/display-name": "JBoss Web Server 5.6 Apache Tomcat 9 OpenJDK8 on UBI8"
                         },
-			"referencePolicy": {
+                        "referencePolicy": {
                             "type": "Local"
                         },
                         "from": {
@@ -57,7 +57,7 @@
                             "version": "1.2",
                             "openshift.io/display-name": "JBoss Web Server 5.6 Apache Tomcat 9 OpenJDK8 on UBI8"
                         },
-			"referencePolicy": {
+                        "referencePolicy": {
                             "type": "Local"
                         },
                         "from": {
@@ -77,7 +77,7 @@
                             "version": "1.2",
                             "openshift.io/display-name": "JBoss Web Server 5.6 Apache Tomcat 9 OpenJDK8 on UBI8"
                         },
-			"referencePolicy": {
+                        "referencePolicy": {
                             "type": "Local"
                         },
                         "from": {
