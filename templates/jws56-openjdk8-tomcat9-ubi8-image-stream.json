@@ -18,10 +18,10 @@
                     "openshift.io/display-name": "JBoss Web Server 5.6 Apache Tomcat 9 OpenJDK8 on UBI8",
                     "openshift.io/provider-display-name": "Red Hat, Inc.",
                     "version": "5.6"
+                },
+                "labels": {
+                    "samples.operator.openshift.io/managed": "true"
                 }
-            },
-            "labels": {
-                "jws56jdk8ubi8": "5.6.1"
             },
             "spec": {
                 "tags": [
