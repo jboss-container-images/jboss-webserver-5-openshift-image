@@ -26,7 +26,7 @@
             "spec": {
                 "tags": [
                     {
-                        "name": "openjdk11",
+                        "name": "openjdk-11",
                         "annotations": {
                             "description": "JBoss Web Server 5 Apache Tomcat 9 OpenJDK11 Latest version on UBI8 S2I images.",
                             "iconClass": "icon-rh-tomcat",
@@ -49,7 +49,7 @@
                         }
                     },
                     {
-                        "name": "openjdk8",
+                        "name": "openjdk-8",
                         "annotations": {
                             "description": "JBoss Web Server 5 Apache Tomcat 9 OpenJDK8 Latest version on UBI8 S2I images.",
                             "iconClass": "icon-rh-tomcat",
