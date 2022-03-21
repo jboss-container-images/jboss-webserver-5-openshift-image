@@ -1,16 +1,16 @@
 schema_version: 1
 
-name: "jboss-webserver-5/jws56-openjdk8-rhel8-openshift"
-description: "Red Hat JBoss Web Server 5.6 - Tomcat 9 OpenShift container image with OpenJDK8 on UBI8"
-version: "5.6.1"
-from: "jboss-webserver-5/webserver56-openjdk8-tomcat9-rhel8:5.6.1"
+name: "jboss-webserver-5/jws57-openjdk8-rhel8-openshift"
+description: "Red Hat JBoss Web Server 5.7 - Tomcat 9 OpenShift container image with OpenJDK8 on UBI8"
+version: "5.7.0"
+from: "jboss-webserver-5/webserver57-openjdk8-tomcat9-rhel8:5.7.0"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-56-openjdk8-rhel8-openshift-container"
+      value: "jboss-webserver-57-openjdk8-rhel8-openshift-container"
     - name: "io.k8s.description"
-      value: "Platform for building and running web applications on JBoss Web Server 5.6 with OpenJDK8 - Tomcat v9"
+      value: "Platform for building and running web applications on JBoss Web Server 5.7 with OpenJDK8 - Tomcat v9"
     - name: "io.k8s.display-name"
-      value: "JBoss Web Server 5.6 OpenJDK8"
+      value: "JBoss Web Server 5.7 OpenJDK8"
     - name: "io.openshift.expose-services"
       value: "8080:http"
     - name: "io.openshift.tags"
@@ -23,7 +23,7 @@ envs:
     - name: "STI_BUILDER"
       value: "jee"
     - name: JWS_HTTPS_CERTIFICATE_DIR
-      example: /opt/jws-5.6/tomcat/conf
+      example: /opt/jws-5.7/tomcat/conf
     - name: JWS_HTTPS_CERTIFICATE
       example: server.crt
     - name: JWS_HTTPS_CERTIFICATE_KEY
@@ -137,4 +137,4 @@ packages:
 run:
       user: 185
       cmd:
-          - "/opt/jws-5.6/tomcat/bin/launch.sh"
+          - "/opt/jws-5.7/tomcat/bin/launch.sh"
