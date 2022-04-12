@@ -17,7 +17,7 @@
     },
     "labels": {
         "template": "jws56-openjdk11-tomcat9-ubi8-basic-s2i",
-        "jws56jdk11ubi8": "5.6.1"
+        "jws56jdk11ubi8": "5.6.2"
     },
     "message": "A new JWS application for Apache Tomcat 9 has been created in your project.",
     "parameters": [
@@ -183,7 +183,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "jboss-webserver56-openjdk11-tomcat9-openshift-ubi8:5.6.1"
+                            "name": "jboss-webserver56-openjdk11-tomcat9-openshift-ubi8:5.6.2"
                         }
                     }
                 },
