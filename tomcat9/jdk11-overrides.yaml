@@ -62,6 +62,10 @@ modules:
           - name: jboss.container.util.logging.bash
           - name: os-eap-python
             version: "3.6"
+packages:
+      content_sets_file: content_sets_rhel8_jdk11.yml
+      install:
+          - python3-pyyaml
 osbs:
       repository:
             name: containers/jboss-webserver-openjdk11-tomcat9
@@ -75,3 +79,4 @@ osbs:
                       - x86_64
                       - s390x
                       - ppc64le
+                      - aarch64
