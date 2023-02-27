@@ -16,41 +16,8 @@ modules:
                   ref: main
           - path: custom-modules
       install:
-          - name: jboss.container.maven.35.bash
-            version: "3.5"
-          - name: dynamic-resources
-          - name: s2i-common
           - name: java-alternatives
-          - name: os-jws-s2i
-            version: "3.0"
-          - name: jws8-conffiles
-            version: "1.0"
-          - name: rm-manager
-            version: "1.0"
-          - name: os-jws-deployments
-            version: "3.0"
-          - name: os-jws-hello
-            version: "3.0"
-          - name: jboss.container.jolokia.bash
-          - name: os-jws-jolokia
-            version: "3.0"
-          - name: jws5-logging
-            version: "1.0"
-          - name: jboss.container.java.jvm.bash
-          - name: os-jws-launch
-            version: "3.0"
-          - name: os-jws-https
-            version: "3.0"
-          - name: os-jws-rm-root
-            version: "3.0"
-          - name: os-jws-rm-defaults
-            version: "3.0"
-          - name: os-jws-chmod
-            version: "3.0"
-          - name: openshift-passwd
-          - name: jboss.container.util.logging.bash
-          - name: os-eap-python
-            version: "3.6"
+
 osbs:
       repository:
             name: containers/jboss-webserver-openjdk8-tomcat9

@@ -2,8 +2,8 @@ schema_version: 1
 
 name: "jboss-webserver-5/jws57-openjdk8-rhel8-openshift"
 description: "Red Hat JBoss Web Server 5.7 - Tomcat 9 OpenShift container image with OpenJDK8 on UBI8"
-version: "5.7.1"
-from: "jboss-webserver-5/webserver57-openjdk8-tomcat9-rhel8:5.7.1"
+version: "5.7.2"
+from: "jboss-webserver-5/webserver57-openjdk8-tomcat9-rhel8:5.7.2"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-57-openjdk8-rhel8-openshift-container"
@@ -93,7 +93,7 @@ modules:
                   ref: master
           - name: jboss-jws-modules
             git:
-                  url: https://github.com/web-servers/jboss-jws-container-images-modules
+                  url: https://github.com/web-servers/jboss-jws-container-images-modules.git
                   ref: main
           - path: custom-modules
       install:
@@ -129,6 +129,10 @@ modules:
           - name: jboss.container.util.logging.bash
           - name: os-eap-python
             version: "3.6"
+          - name: os-jws-prometheus
+            version: "3.0"
+          - name: jws5-logging
+            version: "1.0"
 
 packages:
       content_sets_file: content_sets.yml
