@@ -13,10 +13,6 @@ labels:
       value: "JBoss Web Server 5.7 OpenJDK17"
 modules:
       repositories:
-          - name: cct_module
-            git:
-                  url: https://github.com/jboss-openshift/cct_module.git
-                  ref: 0.39.0
           - name: jboss-eap-modules
             git:
                   url: https://github.com/jboss-container-images/jboss-eap-modules.git
@@ -27,7 +23,7 @@ modules:
                   ref: main
           - path: custom-modules
       install:
-          - name: jboss.container.java.rm-openjdk
+          - name: jboss.container.java.singleton-jdk
           - name: jboss.container.java.jvm.bash
             version: "2.0"
 
