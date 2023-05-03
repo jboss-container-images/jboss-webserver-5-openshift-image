@@ -32,7 +32,7 @@
                             "iconClass": "icon-rh-tomcat",
                             "tags": "builder,tomcat,tomcat9,java,jboss,hidden",
                             "supports": "tomcat9:5.7,tomcat:9,java:17",
-                            "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
+                            "sampleRepo": "https://github.com/web-servers/tomcat-websocket-chat-quickstart.git",
                             "sampleContextDir": "tomcat-websocket-chat",
                             "version": "latest",
                             "openshift.io/display-name": "JBoss Web Server 5.7 Apache Tomcat 9 OpenJDK17 on UBI8"
@@ -52,9 +52,9 @@
                             "iconClass": "icon-rh-tomcat",
                             "tags": "builder,tomcat,tomcat9,java,jboss,hidden",
                             "supports": "tomcat9:5.7,tomcat:9,java:17",
-                            "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
+                            "sampleRepo": "https://github.com/web-servers/tomcat-websocket-chat-quickstart.git",
                             "sampleContextDir": "tomcat-websocket-chat",
-                            "version": "1.2",
+                            "version": "5.7.2",
                             "openshift.io/display-name": "JBoss Web Server 5.7 Apache Tomcat 9 OpenJDK17 on UBI8"
                         },
 			"referencePolicy": {
