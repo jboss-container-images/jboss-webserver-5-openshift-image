@@ -1,16 +1,16 @@
 schema_version: 1
 
-name: "jboss-webserver-5/jws57-openjdk11-rhel8-openshift"
-description: "Red Hat JBoss Web Server 5.7 - Tomcat 9 OpenShift container image with OpenJDK11 on UBI8"
+name: "jboss-webserver-5/jws57-openjdk17-rhel8-openshift"
+description: "Red Hat JBoss Web Server 5.7 - Tomcat 9 OpenShift container image with OpenJDK17 on UBI8"
 version: "5.7.2"
-from: "jboss-webserver-5/webserver57-openjdk11-tomcat9-rhel8:5.7.2"
+from: "jboss-webserver-5/webserver57-openjdk17-tomcat9-rhel8:5.7.2"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-57-openjdk11-rhel8-openshift-container"
+      value: "jboss-webserver-57-openjdk17-rhel8-openshift-container"
     - name: "io.k8s.description"
-      value: "Platform for building and running web applications on JBoss Web Server 5.7 with OpenJDK11 - Tomcat v9"
+      value: "Platform for building and running web applications on JBoss Web Server 5.7 with OpenJDK17 - Tomcat v9"
     - name: "io.k8s.display-name"
-      value: "JBoss Web Server 5.7 OpenJDK11"
+      value: "JBoss Web Server 5.7 OpenJDK17"
 modules:
       repositories:
           - name: jboss-eap-modules
@@ -24,14 +24,16 @@ modules:
           - path: custom-modules
       install:
           - name: jboss.container.java.singleton-jdk
+          - name: jboss.container.java.jvm.bash
+            version: "2.0"
 
 packages:
-      content_sets_file: content_sets_rhel8_jdk11.yml
+      content_sets_file: content_sets_rhel8_jdk17.yml
       install:
           - python3-pyyaml
 osbs:
       repository:
-            name: containers/jboss-webserver-openjdk11-tomcat9
+            name: containers/jboss-webserver-openjdk17-tomcat9
             branch: jws-5.7-openshift-rhel-8
       configuration:
           container:

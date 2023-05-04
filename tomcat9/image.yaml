@@ -86,7 +86,7 @@ modules:
           - name: cct_module
             git:
                   url: https://github.com/jboss-openshift/cct_module.git
-                  ref: 0.39.0
+                  ref: 0.45.4
           - name: jboss-eap-modules
             git:
                   url: https://github.com/jboss-container-images/jboss-eap-modules.git
@@ -97,8 +97,8 @@ modules:
                   ref: main
           - path: custom-modules
       install:
-          - name: jboss.container.maven.35.bash
-            version: "3.5"
+          - name: jboss.container.maven
+            version: "8.0.3.5"
           - name: dynamic-resources
           - name: s2i-common
           - name: os-jws-s2i
@@ -111,7 +111,8 @@ modules:
             version: "3.0"
           - name: os-jws-hello
             version: "3.0"
-          - name: jboss.container.jolokia.bash
+          - name: jboss.container.jolokia
+            version: "8.2"
           - name: os-jws-jolokia
             version: "3.0"
           - name: jboss.container.java.jvm.bash
