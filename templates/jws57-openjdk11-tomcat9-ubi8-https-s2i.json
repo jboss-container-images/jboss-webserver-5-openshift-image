@@ -18,7 +18,7 @@
     },
     "labels": {
         "template": "jws57-openjdk11-tomcat9-ubi8-https-s2i",
-        "jws57jdk11ubi8": "5.7.2"
+        "jws57jdk11ubi8": "5.7.3"
     },
     "message": "A new JWS application for Apache Tomcat 9 has been created in your project. Please be sure to create the secret named \"${JWS_HTTPS_SECRET}\" containing the ${JWS_HTTPS_CERTIFICATE} file used for serving secure content.",
     "parameters": [
@@ -47,14 +47,14 @@
             "displayName": "Git Repository URL",
             "description": "Git source URI for application",
             "name": "SOURCE_REPOSITORY_URL",
-            "value": "https://github.com/jboss-openshift/openshift-quickstarts.git",
+            "value": "https://github.com/web-servers/tomcat-websocket-chat-quickstart.git",
             "required": true
         },
         {
             "displayName": "Git Reference",
             "description": "Git branch/tag reference",
             "name": "SOURCE_REPOSITORY_REF",
-            "value": "1.2",
+            "value": "main",
             "required": false
         },
         {
@@ -266,7 +266,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "jboss-webserver57-openjdk11-tomcat9-openshift-ubi8:5.7.2"
+                            "name": "jboss-webserver57-openjdk11-tomcat9-openshift-ubi8:5.7.3"
                         }
                     }
                 },
