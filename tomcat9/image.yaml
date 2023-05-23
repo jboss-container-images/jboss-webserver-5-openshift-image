@@ -131,8 +131,6 @@ modules:
           - name: jboss.container.util.logging.bash
           - name: os-eap-python
             version: "3.6"
-          - name: os-jws-prometheus
-            version: "3.0"
           - name: jws5-logging
             version: "1.0"
 

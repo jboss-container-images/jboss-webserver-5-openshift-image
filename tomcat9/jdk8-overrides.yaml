@@ -13,6 +13,8 @@ modules:
           - path: custom-modules
       install:
           - name: java-alternatives
+          - name: os-jws-prometheus
+            version: "3.0"
 
 osbs:
       repository:
