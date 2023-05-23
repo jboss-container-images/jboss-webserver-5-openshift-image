@@ -32,7 +32,7 @@
                             "iconClass": "icon-rh-tomcat",
                             "tags": "builder,tomcat,tomcat9,java,jboss,hidden",
                             "supports": "tomcat9:5.7,tomcat:9,java:8",
-                            "sampleRepo": "https://github.com/web-servers/tomcat-websocket-chat-quickstart.git",
+                            "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
                             "sampleContextDir": "tomcat-websocket-chat",
                             "version": "latest",
                             "openshift.io/display-name": "JBoss Web Server 5.7 Apache Tomcat 9 OpenJDK8 on UBI8"
@@ -52,7 +52,7 @@
                             "iconClass": "icon-rh-tomcat",
                             "tags": "builder,tomcat,tomcat9,java,jboss,hidden",
                             "supports": "tomcat9:5.7,tomcat:9,java:8",
-                            "sampleRepo": "https://github.com/web-servers/tomcat-websocket-chat-quickstart.git",
+                            "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
                             "sampleContextDir": "tomcat-websocket-chat",
                             "version": "5.7.3",
                             "openshift.io/display-name": "JBoss Web Server 5.7 Apache Tomcat 9 OpenJDK8 on UBI8"
@@ -72,7 +72,7 @@
                             "iconClass": "icon-rh-tomcat",
                             "tags": "builder,tomcat,tomcat9,java,jboss,hidden",
                             "supports": "tomcat9:5.7,tomcat:9,java:8",
-                            "sampleRepo": "https://github.com/web-servers/tomcat-websocket-chat-quickstart.git",
+                            "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
                             "sampleContextDir": "tomcat-websocket-chat",
                             "version": "5.7.2",
                             "openshift.io/display-name": "JBoss Web Server 5.7 Apache Tomcat 9 OpenJDK8 on UBI8"
@@ -92,7 +92,7 @@
                             "iconClass": "icon-rh-tomcat",
                             "tags": "builder,tomcat,tomcat9,java,jboss,hidden",
                             "supports": "tomcat9:5.7,tomcat:9,java:8",
-                            "sampleRepo": "https://github.com/web-servers/tomcat-websocket-chat-quickstart.git",
+                            "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
                             "sampleContextDir": "tomcat-websocket-chat",
                             "version": "5.7.1",
                             "openshift.io/display-name": "JBoss Web Server 5.7 Apache Tomcat 9 OpenJDK8 on UBI8"
@@ -112,7 +112,7 @@
                             "iconClass": "icon-rh-tomcat",
                             "tags": "builder,tomcat,tomcat9,java,jboss,hidden",
                             "supports": "tomcat9:5.7,tomcat:9,java:8",
-                            "sampleRepo": "https://github.com/web-servers/tomcat-websocket-chat-quickstart.git",
+                            "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
                             "sampleContextDir": "tomcat-websocket-chat",
                             "version": "5.7.0",
                             "openshift.io/display-name": "JBoss Web Server 5.7 Apache Tomcat 9 OpenJDK8 on UBI8"
