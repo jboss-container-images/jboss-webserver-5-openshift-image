@@ -21,7 +21,7 @@
                 }
             },
             "labels": {
-                "jws57jdk8ubi8": "5.7.3"
+                "jws57jdk8ubi8": "5.7.4"
             },
             "spec": {
                 "tags": [
@@ -43,6 +43,26 @@
                         "from": {
                             "kind": "DockerImage",
                             "name": "registry.redhat.io/jboss-webserver-5/jws57-openjdk8-openshift-rhel8:latest"
+                        }
+                    },
+                    {
+                        "name": "5.7.4",
+                        "annotations": {
+                            "description": "JBoss Web Server 5.7 Apache Tomcat 9 OpenJDK8 on UBI8 S2I images.",
+                            "iconClass": "icon-rh-tomcat",
+                            "tags": "builder,tomcat,tomcat9,java,jboss,hidden",
+                            "supports": "tomcat9:5.7,tomcat:9,java:8",
+                            "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
+                            "sampleContextDir": "tomcat-websocket-chat",
+                            "version": "5.7.4",
+                            "openshift.io/display-name": "JBoss Web Server 5.7 Apache Tomcat 9 OpenJDK8 on UBI8"
+                        },
+			"referencePolicy": {
+                            "type": "Local"
+                        },
+                        "from": {
+                            "kind": "DockerImage",
+                            "name": "registry.redhat.io/jboss-webserver-5/jws57-openjdk8-openshift-rhel8:5.7.4"
                         }
                     },
                     {
