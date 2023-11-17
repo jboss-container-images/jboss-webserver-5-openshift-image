@@ -18,7 +18,7 @@
     },
     "labels": {
         "template": "jws57-openjdk17-tomcat9-ubi8-https-s2i",
-        "jws57jdk17ubi8": "5.7.6"
+        "jws57jdk17ubi8": "5.7.7"
     },
     "message": "A new JWS application for Apache Tomcat 9 has been created in your project. Please be sure to create the secret named \"${JWS_HTTPS_SECRET}\" containing the ${JWS_HTTPS_CERTIFICATE} file used for serving secure content.",
     "parameters": [
@@ -266,7 +266,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "jboss-webserver57-openjdk17-tomcat9-openshift-ubi8:5.7.6"
+                            "name": "jboss-webserver57-openjdk17-tomcat9-openshift-ubi8:5.7.7"
                         }
                     }
                 },
