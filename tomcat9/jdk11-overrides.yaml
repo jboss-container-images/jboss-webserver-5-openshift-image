@@ -13,6 +13,10 @@ labels:
       value: "JBoss Web Server 5.7 OpenJDK11"
 modules:
       repositories:
+          - name: cct_module
+            git:
+                  url: https://github.com/jboss-openshift/cct_module.git
+                  ref: 0.45.4
           - name: jboss-eap-modules
             git:
                   url: https://github.com/jboss-container-images/jboss-eap-modules.git
@@ -23,6 +27,8 @@ modules:
                   ref: main
           - path: custom-modules
       install:
+          - name: jboss.container.maven
+            version: "8.2.3.6"
           - name: jboss.container.java.singleton-jdk
           - name: os-jws-prometheus
             version: "3.0"
