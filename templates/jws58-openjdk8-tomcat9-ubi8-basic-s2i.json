@@ -6,18 +6,18 @@
             "iconClass": "icon-rh-tomcat",
             "openshift.io/provider-display-name": "Red Hat, Inc.",
             "tags": "tomcat,tomcat9,java,jboss",
-            "version": "5.7",
-            "openshift.io/display-name": "JBoss Web Server 5.7 Apache Tomcat 9 OpenJDK8 on UBI8 (no https)",
+            "version": "5.8",
+            "openshift.io/display-name": "JBoss Web Server 5.8 Apache Tomcat 9 OpenJDK8 on UBI8 (no https)",
             "description": "An example JBoss Web Server application. For more information about using this template, see https://github.com/jboss-openshift/application-templates.",
-            "template.openshift.io/long-description": "This template defines resources needed to develop Red Hat JBoss Web Server 5.7 Apache Tomcat 9 based application, including a build configuration, and an application deployment configuration.",
+            "template.openshift.io/long-description": "This template defines resources needed to develop Red Hat JBoss Web Server 5.8 Apache Tomcat 9 based application, including a build configuration, and an application deployment configuration.",
             "template.openshift.io/documentation-url": "https://access.redhat.com/documentation/en/red-hat-jboss-web-server/",
             "template.openshift.io/support-url": "https://access.redhat.com"
         },
-        "name": "jws57-openjdk8-tomcat9-ubi8-basic-s2i"
+        "name": "jws58-openjdk8-tomcat9-ubi8-basic-s2i"
     },
     "labels": {
-        "template": "jws57-openjdk8-tomcat9-ubi8-basic-s2i",
-        "jws57jdk8ubi8": "5.7.8"
+        "template": "jws58-openjdk8-tomcat9-ubi8-basic-s2i",
+        "jws58jdk8ubi8": "5.8.0"
     },
     "message": "A new JWS application for Apache Tomcat 9 has been created in your project.",
     "parameters": [
@@ -183,7 +183,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "jboss-webserver57-openjdk8-tomcat9-openshift-ubi8:5.7.8"
+                            "name": "jboss-webserver58-openjdk8-tomcat9-openshift-ubi8:5.8.0"
                         }
                     }
                 },
